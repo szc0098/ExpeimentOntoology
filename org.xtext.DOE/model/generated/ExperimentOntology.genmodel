@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.DOE/src-gen" editDirectory="/org.xtext.DOE.edit/src"
+    editorDirectory="/org.xtext.DOE.editor/src" modelPluginID="org.xtext.DOE" forceOverwrite="true"
+    modelName="ExperimentOntology" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.DOE.edit"
+    editorPluginID="org.xtext.DOE.editor" runtimeVersion="2.10">
+  <genPackages prefix="ExperimentOntology" basePackage="org.xtext.DOE" disposableProviderFactory="true"
+      fileExtensions="mydsl" ecorePackage="ExperimentOntology.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//VariableType">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//VariableType/QUALITATIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//VariableType/QUANTITATIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//VariableType/CONTINOUS"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//VariableType/DISCRETE"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//VariableType/BINARY"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//VariableType/NONBINARY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Expression">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Expression/TRUE"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Expression/FALSE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Links">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Links/is"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Links/occurs"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Links/to"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Links/in"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Temporal">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/precedes"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/between"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/eventually"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/always"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/before"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/after"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/until"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/never"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/leads"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/absent"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Temporal/exists"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Logical">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Logical/and"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Logical/or"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Logical/not"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Coherence">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Coherence/EXPLAIN"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Coherence/ANALOGOUS"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Coherence/DATA"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Coherence/CONTRADICT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Function">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/MIN"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/MAX"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/EXP"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/INVERSE"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/SIN"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/COS"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/TAN"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/FACTORIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Function/LOG"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Changes">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Changes/CHANGED"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Changes/INCREASED"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Changes/DECREASED"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Changes/CONSTANT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//Levels">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Levels/HIGH"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Levels/MEDIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//Levels/LOW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//DesignType">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//DesignType/FULLFACTORIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//DesignType/FRACTIONALFACTORIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//DesignType/OTHERS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ExperimentOntology.ecore#//ResponseType">
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//ResponseType/SIMPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="ExperimentOntology.ecore#//ResponseType/COMPOSITE"/>
+    </genEnums>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Model/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//ExperimentOntology"/>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//ModelSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//ModelSection/modName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//ModelSection/mechanisms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//ModelSection/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//ModelSection/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Mechanism">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Mechanism/mechanismName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Mechanism/LHS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Mechanism/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Mechanism/RHS"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Reaction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Reaction/agent1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Reaction/agent"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//GuardCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//GuardCondition/gd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//GuardCondition/condition1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//GuardCondition/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//GuardCondition/condition2"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//EventDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//EventDescriptor/eventName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//EventDescriptor/event"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Factor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Factor/factorName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Factor/factorType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Factor/factorType1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Factor/factorValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Factor/factorProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//properties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//properties/pName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//properties/pVal"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Values">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Values/fVal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Values/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Values/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Values/fvalue"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Goals">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Goals/objOfStudy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Goals/purpose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Goals/focus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Goals/viewPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Goals/context"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Hypothesis">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Hypothesis/mechHypothesis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Hypothesis/evidences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Hypothesis/coherenceLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Hypothesis/relHypothesis"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//CoherenceLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//CoherenceLink/coherence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//CoherenceLink/hyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//CoherenceLink/evi"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//MechHypothesis">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//MechHypothesis/mName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//MechHypothesis/assoMech"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//MechHypothesis/mechanisticHypothesis"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Evidence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Evidence/eName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Evidence/query"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Evidence/objOfStudy"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//TemporalPattern"/>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/l2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/exp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/op1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/op2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/l3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Condition/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/lo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Condition/e"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/exp1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Condition/v"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Event"/>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Simultaneous">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Simultaneous/sim1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Simultaneous/log"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Simultaneous/sim2"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Dispersed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Dispersed/disp"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//RelationalQuery"/>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Query1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/factor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/control"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/start1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/end1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/response"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/start2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query1/end2"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Query2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query2/function1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query2/response1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query2/factor1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query2/function2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query2/response2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query2/factor2"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Query3">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/factor1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/control1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/Level2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/x2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/response1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/Level4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/x4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/factor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/control"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/response"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/start1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Query3/end1"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Experiment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Experiment/expName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Experiment/expDesign"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Experiment/perfMeasure"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Design">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Design/designType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Design/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Design/iteration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Design/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Variables">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Variables/independentVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Variables/controlVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//Variables/dependentVariables"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//IndependentVariables">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//IndependentVariables/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//ControlVariables">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//ControlVariables/controlName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//ControlVariables/controlType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//ControlVariables/controlValue"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//DependentVariables">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ExperimentOntology.ecore#//DependentVariables/responseName"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//FactorLevels">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//FactorLevels/facName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//FactorLevels/l"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//FactorLevels/l1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//FactorLevels/l2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//FactorLevels/start1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//FactorLevels/end1"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Response">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Response/responseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Response/responseType"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//Iteration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//Iteration/iterations"/>
+    </genClasses>
+    <genClasses ecoreClass="ExperimentOntology.ecore#//PerformanceMeasure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//PerformanceMeasure/expectedResponse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//PerformanceMeasure/er"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExperimentOntology.ecore#//PerformanceMeasure/std"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
