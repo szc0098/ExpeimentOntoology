@@ -1,0 +1,130 @@
+model ISHC{
+	mechanism M1 = inflammatoryAgent + Kupffercells 
+                [inflammatoryAgent > inflammatorythreshold] -> Cytokines
+    mechanism M2 = inflammatoryAgent + Kupffercells 
+                [noOfCytokine > cytokineThreshold] -> Cytokines
+    event inflammation = 'void ishc.model.KupfferCell.handleInflammation()'
+    parameter LPS = Solute with properties {tag: LPS, bindable: true ,
+                    bolusRatio:1.0 , pExitMedia: 0.1 , pExitCell: 1.0 , 
+                    bindProb : 0.25 , bindCycles : 1 , numProps : 8 ,
+                    membraneCrossing: true, bileRatio : 0.5 , core2Rim : 0.50 ,
+                    metProbStart : 0.3 , metProbFinish : 0.3 , 
+                    metabolites: 'LPS-Metabolite_A', inflammatory : true ,
+                    pDegrade : 0.0
+                    }
+    parameter TOL = Solute with properties {tag: TOL, bindable:true,bolusRatio:0.0 , 
+                    pExitMedia: 0.001 , pExitCell: 1.0 , bindProb : 0.2 , 
+                    bindCycles : 2 , numProps : 6 , membraneCrossing: true, 
+                    bileRatio : 0.5 , core2Rim : 0.50 , metProbStart : 0.2 ,
+                    metProbFinish : 0.2 , metabolites: 'TOL-Metabolite_B'
+                    }
+    parameter DZ = Solute with properties {tag: DZ, bindable:true, bolusRatio:0.0 , 
+                    pExitMedia: 0.05 , pExitCell: 1.0 , bindProb : 0.5 , 
+                    bindCycles : 2 , numProps : 6 , membraneCrossing: true, 
+                    bileRatio : 0.5 , core2Rim : 0.50 , metProbStart : 0.5 ,
+                    metProbFinish : 0.5 , metabolites: 'TOL-Metabolite_N'
+                    }
+    parameter Cytokine = Solute with properties {tag: Cytokine, bindable:false, 
+                        bolusRatio:0.0 , pExitMedia: 0.02 , pExitCell: 0.0 , 
+                        bindProb : 0.0 , bindCycles : 1 , numProps : 2 , 
+                        membraneCrossing: true, pDegrade : 0.1
+                    }
+    parameter Metabolite_A = Solute with properties {tag: Metabolite_A, bindable:false, 
+                        bolusRatio:0.0 , pExitMedia: 0.0 , pExitCell: 0.0 , 
+                        bindProb : 0.0 , bindCycles : 2 , numProps : 4 ,
+                        membraneCrossing: false, bileRatio : 0.5 , core2Rim : 0.50 ,
+                        transportOut : true
+                    }
+
+    parameter Metabolite_B = Solute with properties {tag: Metabolite_B, bindable:false,
+                        bolusRatio:0.0 , pExitMedia: 0.0 ,pExitCell: 0.0 , 
+                        bindProb : 0.0 , bindCycles : 2 , numProps : 4 ,
+                        membraneCrossing: false, bileRatio : 0.5 , core2Rim : 0.50 ,
+                        transportOut : true
+                    }
+    parameter Metabolite_N = Solute with properties {tag: Metabolite_N, bindable:false,
+                        bolusRatio:0.0 , pExitMedia: 0.0 , pExitCell: 0.0 , 
+                        bindProb : 0.0 , bindCycles : 2 , numProps : 4 ,
+                        membraneCrossing: false, bileRatio : 0.0 , core2Rim : 0.50 ,
+                        transportOut : true
+                    }
+    parameter Metabolite2 = Solute with values {0.9}
+    parameter forwardBias = DISCRETE with values {0.5}
+    parameter lateralBias = DISCRETE with values {0.5}
+    parameter mediaScale = DISCRETE with values {1000}
+    parameter hepDensity = DISCRETE with values {0.0}
+    parameter KCDensity = DISCRETE with values {0.9}
+    parameter bindersPerCellMin = DISCRETE with values {4}
+    parameter bindersPerCellMax = DISCRETE with values {8}
+    parameter eiThresh = DISCRETE with values {1}
+    parameter eiRate = DISCRETE with values {0.05}
+
+    parameter eiResponse = DISCRETE with values {0.25}
+    parameter elThresh = DISCRETE with values {1}
+    parameter elRate = DISCRETE with values {0.05}
+    parameter elResponse = DISCRETE with values {0.25}
+    parameter scale = DISCRETE with values {1000000}
+    parameter inflammatoryStimulusThreshold = DISCRETE with values {0}
+    parameter cytokineThreshold = DISCRETE with values {3}
+    parameter exponentialFactor = DISCRETE with values {2}
+    parameter drReplenish = DISCRETE with values {0.005}
+    parameter drRemove = DISCRETE with values {0.015}
+    parameter drRate = DISCRETE with values {30}
+    }
+    goal
+    {
+    object of study : 'Immune system influence on hepatic cytochrome P450
+                        regulation'
+    purpose : 'Explain / characterize'
+    focus : 'the reason for changes in downstream drug metabolism and
+                hepatotoxicity'
+    view point : 'based on the response of hepatic cytochrome P450-
+                regulating mechanisms'
+    context : 'when health and/or therapeutic interventions change.'
+    }
+
+    hypotheses
+    {
+    mechanistic hypotheses
+    {
+        H1 : M1 occurs before M2
+    }
+    evidence
+    {
+        E1: inflammation occurs after inflammatoryAgent >
+            inflammatoryAgentThreshold
+        activation weight : 0.5
+        E2: inflammation is absent after cytokine < cytokineThreshold
+        activation weight : 0.5
+    }
+    coherence model
+     {
+        EXPLAIN (H1)(E1)
+        DATA (Experiment1)(E1 E2)
+    }
+    }
+
+    experiment Exp1{
+        design {
+            variables{
+                independent variables
+                    {
+                    LPS are at levels : LOW where LOW is in the range 1.0 to
+                                        1.0
+                    TOL are at levels : LOW where LOW is in the range 1.0 to
+                                        1.0
+                    DZ are at levels : LOW where LOW is in the range 1.0 to
+                                        1.0
+                    }
+                dependent variables
+                    {
+                    cytokines : type SIMPLE
+                    }
+                }
+            }
+        performance measure is
+            {
+
+                cytokines= 500 +-10
+            }
+}
